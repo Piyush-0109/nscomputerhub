@@ -13,16 +13,18 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import CompanyLogo from "../../assets/logo.jfif";
-import "./appbar.css"
 import { Link, useScrollTrigger } from '@mui/material';
+import "./appbar.css"
+import { useNavigate } from 'react-router-dom';
 
 const drawerWidth = 240;
 const navItems = ['Home', 'About', 'Contact'];
 
 function DrawerAppBar(props) {
-  const { window } = props;
+  const { window, headerBg } = props;
+  console.log(headerBg === "/");
+  const navigate = useNavigate();
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
@@ -80,12 +82,17 @@ function DrawerAppBar(props) {
     window: PropTypes.func,
   };
 
+  function handleLinkClick(event, linkString) {
+    navigate(`/${String(linkString).toLowerCase()}`)
+  }
+
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <ElevationScroll  {...props}>
         <AppBar component="nav" sx={{
-          background: appBarTrigger ? "linear-gradient(to right, #0074e2, #1a3280)" : "transparent",
+          // background: headerBg === "/" ? (appBarTrigger ? "linear-gradient(to right, #0074e2, #1a3280)" : "transparent") : "linear-gradient(to right, #0074e2, #1a3280)",
+          background: "linear-gradient(to right, #0074e2, #1a3280)"
         }}>
           <Toolbar sx={{ justifyContent: 'space-between' }}>
             <Box className="companyLogoWrapper">
@@ -106,7 +113,7 @@ function DrawerAppBar(props) {
                 <Link
                   component="button"
                   underline='hover'
-                  onClick={() => console.log(item)}
+                  onClick={(e) => handleLinkClick(e, item)}
                   key={item}
                   sx={{ margin: '0px 1.5rem', color: 'white', fontWeight: '500', fontSize: '1.2rem' }}
                 >

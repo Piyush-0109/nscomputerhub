@@ -1,17 +1,19 @@
+import { Route, Routes } from 'react-router-dom';
+import MainPage from './components/MainPage';
+import Layout from './components/Layout';
+import About from './components/About';
 import './App.css';
-import DrawerAppBar from './components/Appbar';
-import { Footer } from './components/Footer';
-import { Header } from './components/Header';
-import { Main } from './components/Main';
+import Contact from './components/Contact';
 
 function App() {
   return (
-    <div className="App">
-      {/* <Header /> */}
-      <DrawerAppBar />
-      <Main /><br />
-      <Footer />
-    </div>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Layout>
   );
 }
 
