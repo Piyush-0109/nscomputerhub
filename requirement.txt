@@ -1,0 +1,26 @@
+- Header -> 
+    1. Logo and Name 
+    2. List ->  a. Products and Services
+            b. Solutions
+            c. Contact Us
+
+- Main Page ->
+    1. Banner Image with Text
+    2. Compant Description
+    3. Top Solutions -> a. Software/Hardware Solutions
+                        b. Apple Product Services
+                        c. Custom PC build
+                        d. cctv  
+                        e. networking Solutions
+                        f. Data Recovery
+
+    4. Exclusive Solutions/ Services -> a. Company Contracts with Image and Description
+
+    5. Company logo horizontal scrollable logos
+
+    6. Footer ->    a. Locate Us
+                    b. Contant Number
+                    c. Mail
+
+                    a. Social Media Links
+

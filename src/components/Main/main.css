@@ -1,0 +1,129 @@
+.bannerImageWrapper {
+    height: 500px;
+    width: 100%;
+    position: relative;
+}
+
+.bannerImage {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+
+.bannerImageText {
+    position: absolute;
+    left: 0;
+    top: 80px;
+    font-size: 2rem;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    padding-left: 1rem;
+    font-weight: 500;
+}
+
+@media screen and (min-width:480px) {
+    .bannerImageText {
+        font-size: 4.5rem;
+    }
+}
+
+.typingEffect {
+    width: 100%;
+    animation: typing 3.5s, blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
+.ourServiceWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.ourServiceText {
+    position: relative;
+}
+
+.ourServiceText::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 80%;
+    height: 2px;
+    background: blue;
+    bottom: -5px;
+    right: 0;
+    margin: auto;
+}
+
+.serviceCardContainer {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    border-radius: 5px;
+    word-wrap: break-word;
+}
+
+.serviceCardWrapper {
+    height: 200px;
+    width: 100%;
+}
+
+.serviceCardImage {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+
+.serviceCardDescriptionWrapper {
+    padding: 0px 10px;
+}
+
+.serviceCardSubtitle {
+    height: 70px;
+    overflow: hidden;
+    color: #7e7e7e;
+}
+
+.serviceCardButtonContainer {
+    display: flex;
+    justify-content: right;
+    margin-top: 0.1rem;
+}
+
+.serviceCardButtonWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    color: #ff7e43;
+    padding: 0.6rem;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.serviceCardButtonWrapper:hover {
+    background: #ff7e43;
+    color: white;
+    border: 2px solid transparent;
+}
+
+.readMoreIcon {
+    margin-left: 5px;
+}

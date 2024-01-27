@@ -1,0 +1,10 @@
+.headerListItem {
+    cursor: pointer;
+    padding: 0px 1rem;
+}
+
+.companyNameText {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-wrap: nowrap;
+}
