@@ -56,11 +56,11 @@ export const Main = () => {
           </div>
         </div>
       </div>
-      <div style={{ padding: '0px 2rem' }}>
+      <Container maxWidth={'lg'}>
         <div className="ourServiceWrapper">
           <h2 className="ourServiceText">Our Services</h2>
         </div>
-        <Grid container spacing={5} style={{ marginLeft: '-8px' }}>
+        <Grid container spacing={5}>
           {
             serviceCardArray.map((item, index) => (
               <Grid item xs={12} md={4} key={index}>
@@ -89,7 +89,7 @@ export const Main = () => {
             ))
           }
         </Grid>
-      </div>
-    </div>
+      </Container>
+    </div >
   )
 }
