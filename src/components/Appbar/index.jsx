@@ -13,17 +13,16 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import CompanyLogo from "../../assets/logo.jfif";
+import CompanyLogo from "../../assets/ns_logo.png";
 import { Link, useScrollTrigger } from '@mui/material';
-import "./appbar.css"
 import { useNavigate } from 'react-router-dom';
+import "./appbar.css"
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact'];
+const navItems = ['Service', 'About', 'Contact'];
 
 function DrawerAppBar(props) {
   const { window, headerBg } = props;
-  console.log(headerBg === "/");
   const navigate = useNavigate();
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -34,7 +33,7 @@ function DrawerAppBar(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+        Menu
       </Typography>
       <Divider />
       <List>
@@ -59,9 +58,6 @@ function DrawerAppBar(props) {
 
   function ElevationScroll(props) {
     const { children, window } = props;
-    // Note that you normally won't need to set the window ref as useScrollTrigger
-    // will default to window.
-    // This is only being set here because the demo is in an iframe.
     const trigger = useScrollTrigger({
       disableHysteresis: true,
       threshold: 0,
@@ -75,10 +71,6 @@ function DrawerAppBar(props) {
 
   ElevationScroll.propTypes = {
     children: PropTypes.element.isRequired,
-    /**
-     * Injected by the documentation to work in an iframe.
-     * You won't need it on your project.
-     */
     window: PropTypes.func,
   };
 
@@ -90,13 +82,20 @@ function DrawerAppBar(props) {
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <ElevationScroll  {...props}>
-        <AppBar component="nav" sx={{
-          // background: headerBg === "/" ? (appBarTrigger ? "linear-gradient(to right, #0074e2, #1a3280)" : "transparent") : "linear-gradient(to right, #0074e2, #1a3280)",
-          background: "linear-gradient(to right, #0074e2, #1a3280)"
-        }}>
+        <AppBar
+          className='appbar-custom'
+          component="nav"
+          sx={{
+            background: headerBg === "/"
+              ?
+              (appBarTrigger ? "linear-gradient(to right, #0074e2, #1a3280)" : "transparent")
+              :
+              "linear-gradient(to right, #0074e2, #1a3280)",
+            transition: '0.5s ease'
+          }}>
           <Toolbar sx={{ justifyContent: 'space-between' }}>
-            <Box className="companyLogoWrapper">
-              <img src={CompanyLogo} alt="NS COMPUTER HUB" style={{ height: 40 }} />
+            <Box className="companyLogoWrapper" onClick={() => navigate("/")}>
+              <img src={CompanyLogo} alt="NS COMPUTER HUB" style={{ height: '40px' }} />
               <span className="companyNameText">NS COMPUTER HUB</span>
             </Box>
             <IconButton
@@ -115,7 +114,7 @@ function DrawerAppBar(props) {
                   underline='hover'
                   onClick={(e) => handleLinkClick(e, item)}
                   key={item}
-                  sx={{ margin: '0px 1.5rem', color: 'white', fontWeight: '500', fontSize: '1.2rem' }}
+                  sx={{ margin: '0px 1.5rem', color: 'white', fontWeight: '500', fontSize: '1.3rem', fontFamily: 'Hammersmith One' }}
                 >
                   {item}
                 </Link>

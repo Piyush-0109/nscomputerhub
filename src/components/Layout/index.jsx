@@ -3,14 +3,13 @@ import DrawerAppBar from "../Appbar"
 import { Footer } from "../Footer"
 
 const Layout = ({ children }) => {
-
-    let location = useLocation();
+    const location = useLocation();
     return (
         <div className="App">
-            <DrawerAppBar headerBg={location.pathname}/>
-            <main style={{marginTop:'64px'}}>
+            <DrawerAppBar headerBg={location.pathname} />
+            <main style={{ marginTop: location.pathname !== "/" ? '64px' : '0px' }}>
                 {children}
-            </main>
+            </main><br />
             <Footer />
         </div>
     )
