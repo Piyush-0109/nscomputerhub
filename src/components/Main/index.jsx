@@ -7,7 +7,7 @@ import CustomPcBuildImage from "../../assets/customPcBuild.jfif";
 import SurvillenceImage from "../../assets/cctv.jfif";
 import NetworkingSolutionsImage from "../../assets/networkingSolution.jfif";
 import DataRecoveryImage from "../../assets/dataRecovery.jfif";
-
+import { Carousel } from "../Carousel";
 import "./main.css"
 
 export const Main = () => {
@@ -47,7 +47,7 @@ export const Main = () => {
   return (
     <div>
       <div className="bannerImageWrapper">
-        <img className="bannerImage" src={BannerImage} alt="Banner Image" />
+        <img className="bannerImage" src={BannerImage} alt="Banner" />
         <div className="bannerImageText">
           Where <br />
           Service Is <br />
@@ -58,7 +58,7 @@ export const Main = () => {
       </div>
       <Container maxWidth={'lg'}>
         <div className="ourServiceWrapper">
-          <h2 className="ourServiceText">Our Services</h2>
+          <h1 className="ourServiceText">Our Services</h1>
         </div>
         <Grid container spacing={5}>
           {
@@ -88,6 +88,9 @@ export const Main = () => {
               </Grid>
             ))
           }
+          <Grid item xs={12}>
+            <Carousel />
+          </Grid>
         </Grid>
       </Container>
     </div >

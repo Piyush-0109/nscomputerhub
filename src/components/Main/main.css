@@ -75,6 +75,11 @@
     border-radius: 5px;
     word-wrap: break-word;
     max-width: calc(100% + 0px);
+    transition: transform .5s;
+}
+
+.serviceCardContainer:hover {
+    transform: scale(1.05);
 }
 
 @media screen and (min-width:480px) {

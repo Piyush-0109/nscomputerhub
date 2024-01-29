@@ -1,0 +1,38 @@
+.scroll {
+    overflow: hidden;
+    position: relative;
+    height: 160px;
+}
+
+.m-scroll {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    height: 100%;
+    width: 200%;
+    margin: 0;
+    font-size: 0;
+    animation: scrollText 30s infinite linear;
+}
+
+.scrollerImageContainer {
+    background-color: white;
+    height: 90px;
+    padding: 0px 1rem
+}
+
+.scrollerImageWrapper {
+    height: inherit;
+    background-size: cover;
+}
+
+@keyframes scrollText {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
