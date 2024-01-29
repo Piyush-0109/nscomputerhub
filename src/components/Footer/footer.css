@@ -1,12 +1,48 @@
-.footerContainer {
-    height: 40px;
-    color: black;
-    position: absolute;
-    left: 0;
-    right: 0;
-    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
+.footerMain {
+    position: relative;
+    width: 100%;
+    bottom: 1vh;
+    /* margin-top: 14%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 36px; */
+}
+
+.footerContent {
+    color: #fff;
+    background-color: #00308b;
+    border-radius: 20px;
+    justify-content: space-between;
+    margin-bottom: 0;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 90px 5% 40px 60px;
+}
+
+.companyFooterText {
+    margin-left: 0%;
+    font-family: 'Hammersmith One', sans-serif !important;
+}
+
+.social:hover {
+    color: red;
+    transition: transform 0.5s ease 0s;
+    transform: rotate(360deg);
+}
+
+.social {
+    padding: 7px;
+    color: green;
+    border: 1px solid;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: transform 0.5s ease 0s;
+}
+
+.socialPadding {
+    padding-top: 10px;
+}
+
+.contentWidth {
+    width: 25%;
 }

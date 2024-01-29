@@ -12,9 +12,9 @@ const Contact = () => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     console.log({
+      fullName: data.get('fullName'),
       email: data.get('email'),
       contact: data.get('contact'),
-      fullName: data.get('fullName'),
       query: data.get('query'),
     });
   };
@@ -54,7 +54,6 @@ const Contact = () => {
             label="Email Address"
             name="email"
             autoComplete="email"
-            autoFocus
           />
           <TextField
             margin="normal"
@@ -64,7 +63,7 @@ const Contact = () => {
             label="Contact"
             type="number"
             id="contact"
-            autoComplete=""
+            autoComplete="contact"
           />
           <TextField
             margin="normal"
@@ -76,7 +75,7 @@ const Contact = () => {
             multiline
             rows={4}
             id="query"
-            autoComplete=""
+            autoComplete="query"
           />
           <Button
             type="submit"
