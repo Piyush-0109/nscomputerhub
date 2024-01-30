@@ -4,6 +4,8 @@ import CustomPcBuildImage from "../assets/customPcBuild.jfif";
 import SurvillenceImage from "../assets/cctv.jfif";
 import NetworkingSolutionsImage from "../assets/networkingSolution.jfif";
 import DataRecoveryImage from "../assets/dataRecovery.jfif";
+import AMCSolutionImage from "../assets/SpotlightImages/AMC_solutions.svg";
+import Area1Image from "../assets/SpotlightImages/free-svg-illustrations.jpg";
 
 export const headerLinksArray = ["Products and Services", "Solutions", "About Us", "Contact"]
 
@@ -46,5 +48,22 @@ export const serviceCardDataArray = [
         title: "Data Recovery & Backup Solutions",
         imageSource: DataRecoveryImage,
         description: "We Provide solutions to build IT infrastructure for your office, warehouse, retail and all kind of business operations."
+    }
+]
+
+export const spotLightCardDataArray = [
+    {
+        imageSource: AMCSolutionImage,
+        cardHeader: "AMC Solutions",
+        cardDescription: "We combine our technology, people, and broader networks to address society's greatest challenges. Since FY16, we've made a positive impact on more than 1 billion lives.",
+        cardButtonText: "Learn More",
+        imageAlignment: "left"
+    },
+    {
+        imageSource: Area1Image,
+        cardHeader: "AMC Solutions",
+        cardDescription: "We combine our technology, people, and broader networks to address society's greatest challenges. Since FY16, we've made a positive impact on more than 1 billion lives.",
+        cardButtonText: "Learn More",
+        imageAlignment: "right"
     }
 ]

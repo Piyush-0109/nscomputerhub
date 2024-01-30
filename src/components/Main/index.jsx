@@ -1,11 +1,10 @@
 import { Container, Grid } from "@mui/material"
-import EastIcon from '@mui/icons-material/East';
 import BannerImage from "../../assets/banner.png"
 import { Carousel } from "../Carousel";
 import { SpotLightCard } from "../SpotlightCard";
-import { spotLightCardDataArray } from "../SpotlightCard/spotLightCardConstans";
-import { serviceCardDataArray } from "../../constants";
+import { serviceCardDataArray, spotLightCardDataArray } from "../../constants";
 import "./main.css"
+import { ServiceCard } from "../ServiceCard";
 
 export const Main = () => {
 
@@ -28,29 +27,7 @@ export const Main = () => {
         <Grid container spacing={5}>
           {
             serviceCardDataArray.map((item, index) => (
-              <Grid item xs={12} md={4} key={index}>
-                <div className="serviceCardContainer">
-                  <div className="serviceCardWrapper">
-                    <img className="serviceCardImage" src={item.imageSource} alt={item.title} />
-                  </div>
-                  <div className="serviceCardDescriptionWrapper">
-                    <div style={{ height: '50px' }}>
-                      <h3>{item.title}</h3>
-                    </div>
-                    <div className="serviceCardSubtitle">
-                      <span>{item.description}</span>
-                    </div>
-                  </div>
-                  <div className="serviceCardButtonContainer">
-                    <div className="serviceCardButtonWrapper">
-                      <span className="readMoreText">
-                        Read More
-                      </span>
-                      <EastIcon fontSize="small" className="readMoreIcon" />
-                    </div>
-                  </div>
-                </div>
-              </Grid>
+              <ServiceCard serviceCardProps={item} key={index} />
             ))
           }
           <Grid item xs={12}>
