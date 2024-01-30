@@ -30,8 +30,8 @@ const Contact = () => {
         {/* <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
               <LockOutlinedIcon />
             </Avatar> */}
-        <Avatar sx={{ bgcolor: deepOrange[500], mb: 1 }}>NS</Avatar>
-        <Typography component="h1" variant="h5">
+        <Avatar sx={{ bgcolor: deepOrange[500], mb: 1, mt: 2 }}>NS</Avatar>
+        <Typography className="contactHeaderText" component="h1" variant="h5">
           Let's Talk
         </Typography>
         <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>

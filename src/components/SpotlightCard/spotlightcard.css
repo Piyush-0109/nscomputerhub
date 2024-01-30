@@ -1,0 +1,28 @@
+.spotLightCardBannerImage {
+    width: 100%;
+}
+
+.spotLightCardDeatilsWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding: 0px 2rem;
+}
+
+.spotLightCardTitle {
+    font-size: 2rem;
+    font-family: 'Hammersmith One', sans-serif;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+    padding: 0.5rem 0px;
+}
+
+.spotLightCardSubTitle {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+    color: #1b1c1d;
+}
