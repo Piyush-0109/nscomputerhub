@@ -8,6 +8,7 @@ import SurvillenceImage from "../../assets/cctv.jfif";
 import NetworkingSolutionsImage from "../../assets/networkingSolution.jfif";
 import DataRecoveryImage from "../../assets/dataRecovery.jfif";
 import { Carousel } from "../Carousel";
+import { Spotlight } from "../Spotlight";
 import "./main.css"
 
 export const Main = () => {
@@ -90,6 +91,9 @@ export const Main = () => {
           }
           <Grid item xs={12}>
             <Carousel />
+          </Grid>
+          <Grid item xs={12}>
+            <Spotlight />
           </Grid>
         </Grid>
       </Container>
