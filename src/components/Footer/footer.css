@@ -14,8 +14,8 @@
 }
 
 .companyFooterText {
-    margin-left: 0%;
     font-family: 'Hammersmith One', sans-serif !important;
+    margin-left: 0rem;
 }
 
 
@@ -65,4 +65,9 @@
     .footerCopyrightText {
         font-size: unset;
     }
+}
+
+.contactUsFooter {
+    display: flex;
+    padding: 0.5rem 0px;
 }

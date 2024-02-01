@@ -6,6 +6,9 @@ import NetworkingSolutionsImage from "../assets/networkingSolution.jfif";
 import DataRecoveryImage from "../assets/dataRecovery.jfif";
 import AMCSolutionImage from "../assets/SpotlightImages/AMC_solutions.svg";
 import Area1Image from "../assets/SpotlightImages/free-svg-illustrations.jpg";
+import Call from '@mui/icons-material/Call';
+import EmailIcon from '@mui/icons-material/Email';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 export const headerLinksArray = ["Products and Services", "Solutions", "About Us", "Contact"]
 
@@ -65,5 +68,31 @@ export const spotLightCardDataArray = [
         cardDescription: "We combine our technology, people, and broader networks to address society's greatest challenges. Since FY16, we've made a positive impact on more than 1 billion lives.",
         cardButtonText: "Learn More",
         imageAlignment: "right"
+    }
+]
+
+export const footerUsefulLinksArray = [
+    "AMC Link",
+    "Software & Hardware Solutions",
+    "Data Recovery Solutions",
+    "Networking Solutions",
+    "Apple Product Service"
+]
+
+export const footerContactUsArray = [
+    {
+        imageSource: <Call />,
+        title: '+917066806255',
+        hrefSource: 'tel:+917066806255'
+    },
+    {
+        imageSource: <EmailIcon />,
+        title: 'dhootgaurav60@gmail.com',
+        hrefSource: '/'
+    },
+    {
+        imageSource: <LocationOnIcon />,
+        title: 'OFFICE NUMBER 5, 1ST FLOOR, 1481, Sadashiv Peth Rd, opposite TILAK SMARAK MANDIR, Perugate, Sadashiv Peth, Pune, Maharashtra 411030.',
+        hrefSource: 'https://maps.app.goo.gl/8Jo81CoqsNC9QxbUA'
     }
 ]
