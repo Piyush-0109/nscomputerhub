@@ -1,19 +1,23 @@
+import React, { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import About from './components/About';
 import Layout from './components/Layout';
-import Contact from './components/Contact';
-import MainPage from './components/MainPage';
 import './App.css';
 
 function App() {
+  const MainPageComponent = React.lazy(() => import('./components/MainPage'))
+  const AboutComponent = React.lazy(() => import('./components/About'))
+  const ContactComponent = React.lazy(() => import('./components/Contact'))
+
   return (
-    <Layout>
-      <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </Layout>
+    <Suspense>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<MainPageComponent />} />
+          <Route path="/about" element={<AboutComponent />} />
+          <Route path="/contact" element={<ContactComponent />} />
+        </Routes>
+      </Layout>
+    </Suspense>
   );
 }
 

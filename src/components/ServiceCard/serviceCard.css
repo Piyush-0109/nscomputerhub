@@ -35,6 +35,17 @@
     padding: 0px 10px;
 }
 
+.serviceCardDescriptionTitleWrapper {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.serviceCardDescriptionTitle {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
 .serviceCardSubtitle {
     height: 100px;
     overflow: hidden;

@@ -1,0 +1,150 @@
+.bannerImage {
+    min-height: calc(60vh - 70px);
+    padding-bottom: 0;
+    padding-top: 0;
+    background-position: 70%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.bannerImageTextHeader {
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding-left: 2rem;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+@media screen and (min-width:480px) {
+    .bannerImageTextHeader {
+        font-size: 4rem;
+        text-shadow: unset;
+    }
+
+    .bannerImage {
+        min-height: calc(100vh - 200px);
+        background-position: 50%;
+    }
+}
+
+.typingEffect {
+    width: 100%;
+    animation: typing 3.5s, blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
+.ourServiceWrapper {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0px;
+}
+
+.ourServiceText {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.ourServiceText::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 50%;
+    transition: all 0.5s ease-in-out;
+    height: 2.5px;
+    background: #0074e2;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+.serviceCardContainer {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    border-radius: 5px;
+    word-wrap: break-word;
+    max-width: calc(100% + 0px);
+    transition: transform .5s;
+}
+
+.serviceCardContainer:hover {
+    transform: scale(1.05);
+}
+
+@media screen and (min-width:480px) {
+    .serviceCardContainer {
+        max-width: 350px;
+    }
+}
+
+.serviceCardWrapper {
+    height: 200px;
+    width: 100%;
+}
+
+.serviceCardImage {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+
+.serviceCardDescriptionWrapper {
+    padding: 0px 10px;
+}
+
+.serviceCardSubtitle {
+    height: 70px;
+    overflow: hidden;
+    color: #7e7e7e;
+}
+
+.serviceCardButtonContainer {
+    display: flex;
+    justify-content: right;
+    margin-top: 0.1rem;
+}
+
+.serviceCardButtonWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    color: #ff7e43;
+    padding: 0.6rem;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.serviceCardButtonWrapper:hover {
+    background: #ff7e43;
+    color: white;
+    border: 2px solid transparent;
+}
+
+.readMoreIcon {
+    margin-left: 5px;
+}

@@ -27,11 +27,7 @@ const Contact = () => {
           alignItems: 'center',
         }}
       >
-        {/* <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-              <LockOutlinedIcon />
-            </Avatar> */}
-        <Avatar sx={{ bgcolor: deepOrange[500], mb: 1, mt: 2 }}>NS</Avatar>
-        <Typography className="contactHeaderText" component="h1" variant="h5">
+        <Typography className="contactHeaderText" component="h1" variant="h5" sx={{ mt: 3 }}>
           Let's Talk
         </Typography>
         <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
@@ -81,13 +77,13 @@ const Contact = () => {
             type="submit"
             fullWidth
             variant="contained"
-            sx={{ mt: 3, mb: 2 }}
+            sx={{ mt: 3, mb: 2, padding: '0.7rem' }}
           >
             Submit
           </Button>
         </Box>
       </Box>
-    </Container>
+    </Container >
   )
 }
 
