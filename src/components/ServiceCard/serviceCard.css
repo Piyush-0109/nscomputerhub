@@ -21,12 +21,20 @@
 .serviceCardWrapper {
     height: 200px;
     width: 100%;
+    overflow: hidden;
 }
 
 .serviceCardImage {
     height: 100%;
     width: 100%;
     background-size: cover;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.serviceCardImage:hover {
+    transform: scale(1.1);
+    transition: transform 1s;
 }
 
 .serviceCardDescriptionWrapper {
@@ -34,7 +42,7 @@
 }
 
 .serviceCardSubtitle {
-    height: 70px;
+    height: 90px;
     overflow: hidden;
     color: #7e7e7e;
 }
@@ -42,7 +50,6 @@
 .serviceCardButtonContainer {
     display: flex;
     justify-content: right;
-    margin-top: 0.1rem;
 }
 
 .serviceCardButtonWrapper {
@@ -50,7 +57,7 @@
     justify-content: center;
     align-items: center;
     background: white;
-    color: #ff7e43;
+    color: #0074e2;
     padding: 0.6rem;
     border-bottom-right-radius: 5px;
     border-top-left-radius: 10px;
@@ -58,10 +65,11 @@
     border: 2px solid transparent;
     transition: 0.3s;
     font-weight: 500;
+    transition: .45s ease-in-out;
 }
 
 .serviceCardButtonWrapper:hover {
-    background: #ff7e43;
+    background: #0074e2;
     color: white;
     border: 2px solid transparent;
 }
