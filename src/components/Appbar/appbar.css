@@ -10,15 +10,9 @@
     cursor: pointer;
 }
 
-
 .companyNameText {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 600;
-    text-wrap: nowrap;
     margin-left: 0.5rem;
-    font-family: 'Hammersmith One', sans-serif;
-}
-
-.headerLinks {
-    font-family: 'Hammersmith One', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }

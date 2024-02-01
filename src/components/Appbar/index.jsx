@@ -114,7 +114,8 @@ function DrawerAppBar(props) {
                   underline='hover'
                   onClick={(e) => handleLinkClick(e, item)}
                   key={item}
-                  sx={{ margin: '0px 1.5rem', color: 'white', fontWeight: '500', fontSize: '1.3rem', fontFamily: 'Hammersmith One' }}
+                  className='headerLinks'
+                  sx={{ margin: '0px 1.5rem', color: 'white', fontWeight: '500', fontSize: '1.3rem', fontFamily: "Poppins, sans-serif" }}
                 >
                   {item}
                 </Link>

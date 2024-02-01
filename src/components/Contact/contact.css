@@ -1,9 +1,5 @@
-.contact-container {
-}
-
 .contactHeaderText {
 	font-weight: 600 !important;
 	font-size: 1.5rem !important;
-	/* text-wrap: nowrap !important; */
-	font-family: 'Hammersmith One', sans-serif !important;
+	font-family: 'Poppins', sans-serif !important;
 }

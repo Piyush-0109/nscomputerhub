@@ -11,8 +11,8 @@ export const ServiceCard = ({ serviceCardProps, index }) => {
           <img className="serviceCardImage" src={imageSource} alt={title} />
         </div>
         <div className="serviceCardDescriptionWrapper">
-          <div style={{ height: '50px' }}>
-            <h3>{title}</h3>
+          <div style={{ height: '60px', display: 'flex', alignItems: 'center' }}>
+            <span style={{ fontSize: '1.3rem', fontWeight: 600 }}>{title}</span>
           </div>
           <div className="serviceCardSubtitle">
             <span>{description}</span>

@@ -12,15 +12,6 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 export const headerLinksArray = ["Products and Services", "Solutions", "About Us", "Contact"]
 
-export const serviceCardArray = [
-    "Software/Hardware Solutions",
-    "Apple Product Services",
-    "Custom PC Build",
-    "CCTV",
-    "Networking Solutions",
-    "Data Recovery and Backup Solutions"
-]
-
 export const serviceCardDataArray = [
     {
         title: "Software & Hardware Solutions",
@@ -48,7 +39,7 @@ export const serviceCardDataArray = [
         description: "We provide best network solutions to bulid IT infrastructure for your office, warehouse, retail and all kind of business operations."
     },
     {
-        title: "Data Recovery & Backup Solutions",
+        title: "Data Recovery Solutions",
         imageSource: DataRecoveryImage,
         description: "We Provide solutions to build IT infrastructure for your office, warehouse, retail and all kind of business operations."
     }

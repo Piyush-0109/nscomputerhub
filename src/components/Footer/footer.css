@@ -1,21 +1,17 @@
-.footerMain {
-    position: relative;
-    width: 100%;
-}
-
 .footerContent {
     color: #fff;
-    /* background-color: #00308b; */
     background: linear-gradient(to right, #0074e2, #1a3280);
     border-radius: 25px 25px 0px 0px;
     justify-content: space-between;
     margin-bottom: 0;
     padding: 1.5rem 3rem 0.5rem 3rem;
+    font-family: 'Poppins', sans-serif;
 }
 
 .companyFooterText {
-    font-family: 'Hammersmith One', sans-serif !important;
-    margin-left: 0rem;
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 
@@ -33,6 +29,7 @@
 
 .socialPadding {
     padding-top: 10px;
+    display: flex;
 }
 
 .contentWidth {
@@ -45,7 +42,7 @@
     align-items: center;
     align-items: center;
     width: 100%;
-    font-family: 'Hammersmith One', sans-serif;
+    font-size: 0.8rem;
 }
 
 .footerDivider {
@@ -70,4 +67,44 @@
 .contactUsFooter {
     display: flex;
     padding: 0.5rem 0px;
+}
+
+.socialMediaIcon {
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+}
+
+.instagramIcon:hover {
+    animation-name: bounce;
+    animation-timing-function: ease;
+}
+
+.facebookIcon:hover {
+    animation-name: bounce;
+    animation-timing-function: ease;
+}
+
+.linkedinIcon:hover {
+    animation-name: bounce;
+    animation-timing-function: ease;
+}
+
+.whatsappIcon:hover {
+    animation-name: bounce;
+    animation-timing-function: ease;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }

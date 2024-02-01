@@ -4,18 +4,12 @@
     box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
     border-radius: 5px;
     word-wrap: break-word;
-    max-width: calc(100% + 0px);
     transition: transform .5s;
+    font-family: 'Poppins', sans-serif;
 }
 
 .serviceCardContainer:hover {
-    transform: scale(1.05);
-}
-
-@media screen and (min-width:480px) {
-    .serviceCardContainer {
-        max-width: 350px;
-    }
+    transform: scale(1.02);
 }
 
 .serviceCardWrapper {
@@ -33,7 +27,7 @@
 }
 
 .serviceCardImage:hover {
-    transform: scale(1.1);
+    transform: scale(1.03);
     transition: transform 1s;
 }
 
@@ -42,7 +36,7 @@
 }
 
 .serviceCardSubtitle {
-    height: 90px;
+    height: 100px;
     overflow: hidden;
     color: #7e7e7e;
 }

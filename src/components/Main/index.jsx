@@ -10,19 +10,21 @@ export const Main = () => {
 
   return (
     <div>
-      <div className="bannerImageWrapper">
-        <img className="bannerImage" src={BannerImage} alt="Banner" />
-        <div className="bannerImageText">
-          Where <br />
-          Service Is <br />
-          <div className="typingEffect">
-            A Way Of Life...
-          </div>
+      <div className="bannerImage" style={{ backgroundImage: `url(${BannerImage})` }} >
+        <div className="bannerImageTextWrapper">
+          <h1 className="bannerImageTextHeader">
+            Can’t <br />
+            Ctrl + Alt + Delete<br />
+            Your Problems?
+            <div className="typingEffect">
+              We Can Help . . .
+            </div>
+          </h1>
         </div>
       </div>
       <Container maxWidth={'lg'}>
         <div className="ourServiceWrapper">
-          <h1 className="ourServiceText">Our Services</h1>
+          <span className="ourServiceText">Our Services</span>
         </div>
         <Grid container spacing={5}>
           {
