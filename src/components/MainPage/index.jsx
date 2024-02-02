@@ -1,9 +1,9 @@
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import BannerImage from "../../assets/banner.png";
-import { Carousel } from "../Carousel";
 import { ServiceCard } from "../ServiceCard";
 import { SpotLightCard } from "../SpotlightCard";
+import { InfinteCarousel } from "../InfiniteCarousel";
 import { serviceCardDataArray, spotLightCardDataArray } from "../../constants";
 import './MainPage.css';
 
@@ -33,7 +33,7 @@ function MainPage() {
             ))
           }
           <Grid item xs={12}>
-            <Carousel />
+            <InfinteCarousel />
           </Grid>
           {
             spotLightCardDataArray.map((item, index) => (
