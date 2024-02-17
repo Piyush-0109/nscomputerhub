@@ -19,7 +19,7 @@ import { useNavigate } from 'react-router-dom';
 import "./appbar.css"
 
 const drawerWidth = 240;
-const navItems = ['Service', 'About', 'Contact'];
+const navItems = ['About', 'Contact'];
 
 function DrawerAppBar(props) {
   const { window, headerBg } = props;

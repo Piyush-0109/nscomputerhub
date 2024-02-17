@@ -1,0 +1,39 @@
+.aboutUsBackgroundContainer {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.whyChooseUsText {
+    font-size: 1.5rem;
+}
+
+.whyChooseUsText {
+    font-family: 'Poppins', sans-serif;
+}
+
+.ourServiceWrapper {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0px;
+}
+
+.ourServiceText {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.ourServiceText::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 50%;
+    transition: all 0.5s ease-in-out;
+    height: 2.5px;
+    background: #0074e2;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
