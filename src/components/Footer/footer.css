@@ -54,13 +54,13 @@
 }
 
 .footerCopyrightText {
-    font-size: 0.7rem;
+    font-size: 0.55rem;
 }
 
 
 @media screen and (min-width:480px) {
     .footerCopyrightText {
-        font-size: unset;
+        font-size: 0.7rem;
     }
 }
 

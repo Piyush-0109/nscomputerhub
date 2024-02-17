@@ -78,7 +78,7 @@ export const footerContactUsArray = [
     },
     {
         imageSource: <EmailIcon />,
-        title: 'dhootgaurav60@gmail.com',
+        title: 'nscomputerhub@gmail.com',
         hrefSource: '/'
     },
     {
