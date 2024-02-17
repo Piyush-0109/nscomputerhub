@@ -15,7 +15,7 @@ export const SpotLightCard = ({ spotLightCardProps }) => {
       {
         (imageAlignment === "left" || !matches) &&
         <Grid item xs={12} md={6} lg={6}>
-          <img src={imageSource} className="spotLightCardBannerImage" />
+          <img src={imageSource} className="spotLightCardBannerImage" alt={cardHeader} />
         </Grid>
       }
       <Grid item xs={12} md={6} lg={6}>
@@ -30,7 +30,7 @@ export const SpotLightCard = ({ spotLightCardProps }) => {
       {
         (imageAlignment !== "left" && matches) &&
         <Grid item xs={12} md={6} lg={6}>
-          <img src={imageSource} className="spotLightCardBannerImage" />
+          <img src={imageSource} className="spotLightCardBannerImage" alt={cardHeader} />
         </Grid>
       }
     </>
