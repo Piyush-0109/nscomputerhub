@@ -74,5 +74,31 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - login into your firebase account
 - create your application in firebase
 - install firebase and firebase tools into your project with the command `npm i firebase && npm install -g firebase-tools`
-
+- login into firebase cli through terminal use command `firebase login` this will redirect you to browser and login into yoour firebase account and wait for login success
+and on success on your terminal it will show login success
+- initialise the firebase into your project use command `firebase init` it will ask few questions before you proceed.
+    **Question will be as follows : inputting the ansers to the questions here itself you can change according to your requirement**
+    - Are you ready to proceed? (Y/n)  y
+    - Which Firebase features do you want to set up for this directory? Press Space to select features, then Enter to
+      confirm your choices. (Press <space> to select, <a> to toggle all, <i> to invert selection, and <enter> to proceed)
+      instance
+       ( ) Firestore: Configure security rules and indexes files for Firestore
+       ( ) Functions: Configure a Cloud Functions directory and its files
+      >(*) Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys
+       ( ) Hosting: Set up GitHub Action deploys
+       ( ) Storage: Configure a security rules file for Cloud Storage
+       ( ) Emulators: Set up local emulators for Firebase products
+      (Move up and down to reveal more choices)
+    - Please select an option: (Use arrow keys)
+      > Use an existing project
+        Create a new project
+        Add Firebase to an existing Google Cloud Platform project
+        Don't set up a default project
+    - Select a default Firebase project for this directory: (Use arrow keys)
+      > ns-computer-hub (NS Computer Hub)
+    - What do you want to use as your public directory? build
+    - Configure as a single-page app (rewrite all urls to /index.html)? Yes
+    - Set up automatic builds and deploys with GitHub? No
+- after initilisation is done run command `npm run build` check if build is success
+- to deploy use command `firebase deploy` the application will now be deployed to the url in the console
 
