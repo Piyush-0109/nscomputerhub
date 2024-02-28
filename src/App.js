@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout';
+import { LoadingScreen } from './components/LoadingScreen';
 import './App.css';
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
   const ContactComponent = React.lazy(() => import('./components/Contact'))
 
   return (
-    <Suspense>
+    <Suspense fallback={<LoadingScreen />}>
       <Layout>
         <Routes>
           <Route path="/" element={<MainPageComponent />} />

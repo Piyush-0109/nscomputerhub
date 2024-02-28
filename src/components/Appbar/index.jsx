@@ -14,7 +14,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import CompanyLogo from "../../assets/ns_logo.png";
-import { Link, useScrollTrigger } from '@mui/material';
+import Link from '@mui/material/Link';
+import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { useNavigate } from 'react-router-dom';
 import "./appbar.css"
 
@@ -38,14 +39,18 @@ function DrawerAppBar(props) {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
+          <ListItem key={item} disablePadding >
+            <ListItemButton sx={{ textAlign: 'center' }} component="button" onClick={() => {
+              navigate(`/${String(item).toLowerCase()}`)
+
+            }
+            }>
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
         ))}
       </List>
-    </Box>
+    </Box >
   );
 
   const container = window !== undefined ? () => window().document.body : undefined;
