@@ -32,9 +32,9 @@ function DrawerAppBar(props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+    <Box sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        Menu
+        Home
       </Typography>
       <Divider />
       <List>
@@ -42,7 +42,7 @@ function DrawerAppBar(props) {
           <ListItem key={item} disablePadding >
             <ListItemButton sx={{ textAlign: 'center' }} component="button" onClick={() => {
               navigate(`/${String(item).toLowerCase()}`)
-
+              handleDrawerToggle()
             }
             }>
               <ListItemText primary={item} />
@@ -138,6 +138,7 @@ function DrawerAppBar(props) {
           onClose={handleDrawerToggle}
           ModalProps={{
             keepMounted: true, // Better open performance on mobile.
+            hideBackdrop: true
           }}
           sx={{
             display: { xs: 'block', sm: 'none' },
