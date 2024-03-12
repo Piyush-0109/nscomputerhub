@@ -3,19 +3,48 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import emailjs from '@emailjs/browser';
 import "./contact.css";
+import { useRef } from "react";
 
 const Contact = () => {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      fullName: data.get('fullName'),
-      email: data.get('email'),
-      contact: data.get('contact'),
-      query: data.get('query'),
-    });
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   const data = new FormData(event.currentTarget);
+  //   console.log({
+  //     fullName: data.get('fullName'),
+  //     email: data.get('email'),
+  //     contact: data.get('contact'),
+  //     query: data.get('query'),
+  //   });
+  // };
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    let emailParams = {
+      to_name: 'NS Computer Hub',
+      from_name: '',
+      from_name_contact: '',
+      message: ''
+    }
+
+    emailjs
+      .send('service_1tm6tho', 'template_b9cwkpa', emailParams, {
+        publicKey: 'f_zwCMGdAkRxQXKgB',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
   };
+
   return (
     <Container component="main" maxWidth="xs">
       <Box
@@ -25,10 +54,10 @@ const Contact = () => {
           alignItems: 'center',
         }}
       >
-        <Typography className="contactHeaderText" component="h1" variant="h5" sx={{ mt: 3 }}>
+        {/* <Typography className="contactHeaderText" component="h1" variant="h5" sx={{ mt: 3 }}>
           Let's Talk
         </Typography>
-        <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+        <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }} action="mailto:absalon0109@gmail.com">
           <TextField
             margin="normal"
             required
@@ -55,7 +84,7 @@ const Contact = () => {
             fullWidth
             name="contact"
             label="Contact"
-            type="number"
+            type="text"
             id="contact"
             autoComplete="contact"
           />
@@ -79,7 +108,22 @@ const Contact = () => {
           >
             Submit
           </Button>
-        </Box>
+          <a style={{ background: 'blue', padding: "0.7rem" }}>
+            Submit
+          </a>
+        </Box> */}
+
+        <form ref={form} onSubmit={sendEmail}>
+          <label>Name</label>
+          <input type="text" name="user_name" /><br />
+          <label>Email</label>
+          <input type="email" name="user_email" /><br />
+          <label>Contact</label>
+          <input type="text" name="user_contact" /><br />
+          <label>Message</label>
+          <textarea name="message" /><br />
+          <input type="submit" value="Send" />
+        </form>
       </Box>
     </Container >
   )
