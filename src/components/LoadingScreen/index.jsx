@@ -1,4 +1,4 @@
-import CompanyLogo from "../../assets/ns_logo.png";
+import CompanyLogo from "../../assets/new_ns_logo.png";
 import "./loadingScreen.css";
 
 export const LoadingScreen = () => {

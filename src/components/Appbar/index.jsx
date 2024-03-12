@@ -13,7 +13,7 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import CompanyLogo from "../../assets/ns_logo.png";
+import CompanyLogo from "../../assets/new_ns_logo.png";
 import Link from '@mui/material/Link';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { useNavigate } from 'react-router-dom';

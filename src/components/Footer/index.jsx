@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { Link, Typography } from "@mui/material";
 import { Grid } from "@mui/material"
 import { footerContactUsArray, footerUsefulLinksArray } from '../../constants';
-import CompanyLogo from "../../assets/ns_logo.png"
+import CompanyLogo from "../../assets/new_ns_logo.png"
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';

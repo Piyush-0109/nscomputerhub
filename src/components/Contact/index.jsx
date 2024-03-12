@@ -1,49 +1,57 @@
-import { Container } from "@mui/material"
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
+import { useState } from "react";
 import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Container from "@mui/material/Container";
+import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import emailjs from '@emailjs/browser';
 import "./contact.css";
-import { useRef } from "react";
 
 const Contact = () => {
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   const data = new FormData(event.currentTarget);
-  //   console.log({
-  //     fullName: data.get('fullName'),
-  //     email: data.get('email'),
-  //     contact: data.get('contact'),
-  //     query: data.get('query'),
-  //   });
-  // };
+  const [userDetails, setUserDetails] = useState({
+    name: '',
+    email: '',
+    contact: '',
+    message: ''
+  })
 
-  const form = useRef();
-
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
 
     let emailParams = {
-      to_name: 'NS Computer Hub',
-      from_name: '',
-      from_name_contact: '',
-      message: ''
+      to_name: 'Gaurav Dhoot',
+      from_name: userDetails.name,
+      from_name_contact: userDetails.contact,
+      from_name_email: userDetails.email,
+      message: userDetails.message
     }
 
-    emailjs
+    await emailjs
       .send('service_1tm6tho', 'template_b9cwkpa', emailParams, {
         publicKey: 'f_zwCMGdAkRxQXKgB',
       })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        },
+      .then(() => {
+        console.log('SUCCESS!');
+        setUserDetails({
+          name: '',
+          email: '',
+          contact: '',
+          message: ''
+        })
+      }, (error) => {
+        console.log('FAILED...', error.text);
+      },
       );
   };
+
+  function handleTextInputChange(e) {
+    let key = e.target.name
+    let textInputObject = { ...userDetails }
+    textInputObject[key] = e.target.value
+    setUserDetails({
+      ...textInputObject
+    })
+  }
 
   return (
     <Container component="main" maxWidth="xs">
@@ -54,20 +62,23 @@ const Contact = () => {
           alignItems: 'center',
         }}
       >
-        {/* <Typography className="contactHeaderText" component="h1" variant="h5" sx={{ mt: 3 }}>
+        <Typography className="contactHeaderText" component="h1" variant="h5" sx={{ mt: 3 }}>
           Let's Talk
         </Typography>
-        <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }} action="mailto:absalon0109@gmail.com">
+        <form onSubmit={sendEmail}>
           <TextField
             margin="normal"
             required
             fullWidth
             id="fullName"
             label="Full Name"
-            name="fullName"
+            name="name"
             type="text"
             autoComplete="fullName"
             autoFocus
+            size="small"
+            value={userDetails.name}
+            onChange={(e) => handleTextInputChange(e)}
           />
           <TextField
             margin="normal"
@@ -77,6 +88,9 @@ const Contact = () => {
             label="Email Address"
             name="email"
             autoComplete="email"
+            size="small"
+            value={userDetails.email}
+            onChange={(e) => handleTextInputChange(e)}
           />
           <TextField
             margin="normal"
@@ -87,18 +101,24 @@ const Contact = () => {
             type="text"
             id="contact"
             autoComplete="contact"
+            size="small"
+            value={userDetails.contact}
+            onChange={(e) => handleTextInputChange(e)}
           />
           <TextField
             margin="normal"
             required
             fullWidth
-            name="query"
-            label="Query"
+            name="message"
+            label="Message"
             type="text"
             multiline
             rows={4}
-            id="query"
-            autoComplete="query"
+            id="message"
+            autoComplete="message"
+            size="small"
+            value={userDetails.message}
+            onChange={(e) => handleTextInputChange(e)}
           />
           <Button
             type="submit"
@@ -108,21 +128,6 @@ const Contact = () => {
           >
             Submit
           </Button>
-          <a style={{ background: 'blue', padding: "0.7rem" }}>
-            Submit
-          </a>
-        </Box> */}
-
-        <form ref={form} onSubmit={sendEmail}>
-          <label>Name</label>
-          <input type="text" name="user_name" /><br />
-          <label>Email</label>
-          <input type="email" name="user_email" /><br />
-          <label>Contact</label>
-          <input type="text" name="user_contact" /><br />
-          <label>Message</label>
-          <textarea name="message" /><br />
-          <input type="submit" value="Send" />
         </form>
       </Box>
     </Container >
