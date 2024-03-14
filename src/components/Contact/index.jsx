@@ -1,10 +1,13 @@
 import { useState } from "react";
 import Box from '@mui/material/Box';
+import emailjs from '@emailjs/browser';
 import Button from '@mui/material/Button';
+import { ResponsiveDialog } from "../Modal";
+import Backdrop from "@mui/material/Backdrop"
 import Container from "@mui/material/Container";
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
-import emailjs from '@emailjs/browser';
+import CircularProgress from "@mui/material/CircularProgress"
 import "./contact.css";
 
 const Contact = () => {
@@ -14,9 +17,12 @@ const Contact = () => {
     contact: '',
     message: ''
   })
+  const [isDialogOpen, setIsDialogOpen] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
 
   const sendEmail = async (e) => {
     e.preventDefault();
+    setIsLoading(true)
 
     let emailParams = {
       to_name: 'Gaurav Dhoot',
@@ -30,14 +36,11 @@ const Contact = () => {
       .send('service_1tm6tho', 'template_b9cwkpa', emailParams, {
         publicKey: 'f_zwCMGdAkRxQXKgB',
       })
-      .then(() => {
-        console.log('SUCCESS!');
-        setUserDetails({
-          name: '',
-          email: '',
-          contact: '',
-          message: ''
-        })
+      .then((response) => {
+        if (response.status === 200) {
+          setIsLoading(false)
+          setIsDialogOpen(true)
+        }
       }, (error) => {
         console.log('FAILED...', error.text);
       },
@@ -130,7 +133,21 @@ const Contact = () => {
           </Button>
         </form>
       </Box>
-    </Container >
+      {isLoading &&
+        <Backdrop
+          sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+          open={isLoading}
+        >
+          <CircularProgress sx={{ color: '#1a3280' }} />
+        </Backdrop>
+      }
+      {isDialogOpen &&
+        <ResponsiveDialog
+          isDialogOpen={isDialogOpen}
+          setIsDialogOpen={setIsDialogOpen}
+        />
+      }
+    </Container>
   )
 }
 
